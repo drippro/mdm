@@ -1,7 +1,7 @@
 function mdez () {
-    window.open("facil.html")
+    window.open("http://drippro.github.io/mdm/facil.html")
 }
 
 function mdhr(){
-    window.open("dificil.html")
+    window.open("http://drippro.github.io/mdm/dificil.html")
 }
