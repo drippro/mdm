@@ -1,4 +1,4 @@
-function mdez () {
+function mdez() {
     window.open("http://drippro.github.io/mdm/facil.html")
 }
 
