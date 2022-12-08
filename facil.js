@@ -1,67 +1,61 @@
 
-var sortead = ["1243","1234","1324","1342","1423","1432","2134","2143","2314","2341","2431","2413","3124","3142","3214","3241","3421","3412","4132","4123","4213","4231","4321","4312"];
+var sortead = ["1243","1234","1324","1342","1423","1432","2134","2143","2314","2341","2431","2413","3124","3142","3214","3241","3421","3412","4132","4123","4213","4231","4321","4312"];//vetor com todos a possibilidades
+var numb = Math.floor(Math.random() * sortead.length);//math floor arrdonda o numero sorteado,que escolhe alguma das possibilidades
+var numbT = sortead[numb]//armazena ela dentro de uma var
 
-var numb = Math.floor(Math.random() * sortead.length);
-var numbT = sortead[numb]
+    var lugar1 = numbT.indexOf("1");
+    var lugar2 = numbT.indexOf("2");
+    var lugar3 = numbT.indexOf("3");
+    var lugar4 = numbT.indexOf("4");
+    //indexOf percorre a string da possibilidade sorteada
+    console.log(numbT)
+    
+    
+function resetarnumero(){
 
+    location.reload()
+   
+} 
+function game(){
+    const res = document.getElementById("inapst").value 
+    const res2 = document.getElementById("inapst").value
+    const res3 = document.getElementById("inapst").value
+    const res4 = document.getElementById("inapst").value
+    var psc1 = res.indexOf("1");
+    var psc2 = res2.indexOf("2");
+    var psc3 = res3.indexOf("3");
+    var psc4 = res4.indexOf("4");
 
-
-    var pos1 = numbT.indexOf("1");
-    var pos2 = numbT.indexOf("2");
-    var pos3 = numbT.indexOf("3");
-    var pos4 = numbT.indexOf("4");
-
-    function game(){
-        const res = document.getElementById("inapst").value
-        var psc1 = res.indexOf("1");
-        if(psc1 == pos1){
-            var rsp = document.getElementById("answ1").innerHTML = "Number 1 Correct✔️"
-        }
-
-        const res2 = document.getElementById("inapst").value
-        var psc2 = res.indexOf("2");
-        if(psc2 == pos2){
-            var rsp = document.getElementById("answ2").innerHTML = "Number 2 Correct✔️"
-        }
-
-        const res3 = document.getElementById("inapst").value
-        var psc3 = res.indexOf("3");
-        if(psc3 == pos3){
-            var rsp = document.getElementById("answ3").innerHTML = "Number 3 Correct✔️"
-        }
-
-        const res4 = document.getElementById("inapst").value
-        var psc4 = res.indexOf("4");
-        if(psc4 == pos4){
-            var rsp = document.getElementById("answ4").innerHTML = "Number 4 Correct✔️"
-        }
-
-        const res5 = document.getElementById("inapst").value
-        if (res5 != "1234" && res5 != "1243" && res5 != "1324" && res5 != "1342" && res5 != "1432" && res5 != "1423" && res5 != "2134" && res5 != "2143" && res5 != "2314" && res5 != "2341" && res5 != "2431" && res5 != "2413" && res5 != "3124" && res5 != "3142" && res5 != "3214" && res5 != "3241" && res5 != "3421" && res5 != "3412" && res5 != "4132" && res5 != "4123" && res5 != "4213" && res5 != "4231" && res5 != "4321" && res5 != "4312" && res5 != "22"){
-            alert("Nao use caracteres diferentes de 1,2,3,4")
-            const rsp = document.getElementById("inapst").value = ""
-        }
-        if (psc1 != pos1 && psc2 != pos2 && psc3 != pos3 && psc4 != pos4) {
-            alert("Errado, tente novamente.")
-        }
-    }   
-    function sort() {
-        let numero2 = Math.floor(Math.random() * sorteados.length);
-        numbT = sortead[numero2]
-        pos1 = num2.indexOf("1");
-        pos2 = num2.indexOf("2");
-        pos3 = num2.indexOf("3");
-        pos4 = num2.indexOf("4");
+    if(res4.length == "5" || res4.length == "6" ||res4.length == "7" ||res4.length == "8" || res4.length == "9"|| res4.length == "0"){
+        alert("Erro, use apenas os numeros = 1,2,3,4")
+        
+    const ans1 = document.getElementById("answ1").innerHTML = " "
+    const ans2 = document.getElementById("answ2").innerHTML = " "
+    const ans3 = document.getElementById("answ3").innerHTML = " "
+    const ans4 = document.getElementById("answ4").innerHTML = " "
+    const res = document.getElementById("inapst").value = " "
     }
 
-    console.log(numbT)
-function resetarnumero(){
-    var ans1 = document.getElementById("answ1").innerHTML = " "
-    var ans2 = document.getElementById("answ2").innerHTML = " "
-    var ans3 = document.getElementById("answ3").innerHTML = " "
-    var ans4 = document.getElementById("answ4").innerHTML = " "
-    const res = document.getElementById("inapst").value = " "
-    sort()
-} 
+
+    //indexOf percorre a string da tentativa colocada no input
+    if(psc1 == lugar1){
+        var rsp = document.getElementById("answ1").innerHTML = "Number 1 Correct✔️"
+    }
+    if(psc2 == lugar2){
+        var rsp = document.getElementById("answ2").innerHTML = "Number 2 Correct✔️"
+    }
+    if(psc3 == lugar3){
+        var rsp = document.getElementById("answ3").innerHTML = "Number 3 Correct✔️"
+    }
+    if(psc4 == lugar4){
+        var rsp = document.getElementById("answ4").innerHTML = "Number 4 Correct✔️"
+    }
+    if (psc1 != lugar1 && psc2 != lugar2 && psc3 != lugar3 && psc4 != lugar4) {
+    alert("Errou tente novamente!")
+    
+}//os if ve se a posicao da possibilidade sorteada é igual da resposta
+  
+    
+}   
 
 
