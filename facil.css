@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(52, 52, 52);
+}
+
+.respostashub {
+    position: relative;
+    text-align: center;
+    height: 20vw;
+    width: 20vw;
+    background-color: black;
+    border-radius: 5px;
+    color: aliceblue;
+}
